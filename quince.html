@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quinceaños</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-container": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "on-primary": "#e5e2e1",
+                        "tertiary": "#3b3b3b",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#d6d4d3",
+                        "tertiary-fixed-dim": "#474747",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed": "#c8c6c6",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "surface": "#f9f9f9",
+                        "on-primary-container": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "secondary-fixed-dim": "#acabab",
+                        "inverse-primary": "#c8c6c5",
+                        "on-surface-variant": "#474747",
+                        "tertiary-container": "#747474",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#3c3b3b",
+                        "primary-fixed": "#5f5e5e",
+                        "outline": "#777777",
+                        "primary-fixed-dim": "#474746",
+                        "outline-variant": "#c6c6c6",
+                        "on-tertiary-fixed": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#ffffff",
+                        "tertiary-fixed": "#5e5e5e",
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#1b1c1c",
+                        "on-primary-fixed-variant": "#e5e2e1",
+                        "surface-container-low": "#f3f3f3",
+                        "on-error-container": "#410002",
+                        "surface-container": "#eeeeee",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "surface-variant": "#e2e2e2"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .glass-caption {
+            background: rgba(249, 249, 249, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+
+<body class="text-on-surface selection:bg-primary-container selection:text-white">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+            <a class="font-serif text-2xl uppercase tracking-[0.2em] text-zinc-900 dark:text-zinc-100"
+                href="index.html">Galería de Fotos</a>
+            <div class="hidden md:flex items-center space-x-12">
+                <a class="font-serif italic text-2xl tracking-tight text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300"
+                    href="boda.html">Bodas</a>
+                <a class="font-serif italic text-2xl tracking-tight text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1"
+                    href="quince.html">Quinceaños</a>
+                <a class="font-serif italic text-2xl tracking-tight text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300"
+                    href="cumple.html">Cumpleaños</a>
+                <a class="font-serif italic text-2xl tracking-tight text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300"
+                    href="mas_fotos.html">Más Fotos</a>
+                <a class="font-serif italic text-2xl tracking-tight text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300"
+                    href="contacto.html">Contacto</a>
+            </div>
+            <button id="menu-btn" class="md:hidden">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+    <main class="pt-32 pb-24">
+        <!-- Hero Section -->
+        <header class="px-8 mb-24 max-w-screen-2xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+                <div class="md:col-span-7">
+                    <span class="block font-label text-xs uppercase tracking-[0.4em] text-outline mb-4">El Día mas feliz
+                        de tu vida</span>
+                    <h1 class="font-headline text-6xl md:text-8xl italic leading-none text-primary mb-8">Quinceañeras
+                    </h1>
+                    <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
+                        Un momento que marca un antes y un después. Busco capturar la esencia de tus quince años,
+                        combinando la belleza de la tradición con esos instantes sinceros y emotivos que hacen tu
+                        historia única e inolvidable.
+                    </p>
+                </div>
+                <div class="md:col-span-5 flex justify-end">
+                    <div class="w-full h-px bg-outline-variant/30 mb-4"></div>
+                </div>
+            </div>
+        </header>
+        <!-- Editorial Gallery Grid -->
+        <section class="px-8 max-w-screen-2xl mx-auto">
+            <div class="editorial-grid">
+                <!-- Main Featured Image -->
+                <div class="col-span-12 md:col-span-8 group relative mb-8">
+                    <div class="aspect-[4/5] md:aspect-[16/9] overflow-hidden bg-surface-dim">
+                        <img alt="Quinceañera Portrait"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Stunning portrait of a young woman in a voluminous emerald green ballgown standing in a sun-drenched historical stone courtyard"
+                            src="https://i.imgur.com/KsREtwI.jpeg" />
+                    </div>
+                    <div class="glass-caption absolute bottom-6 left-6 p-6 max-w-xs">
+                        <p class="font-label text-[10px] uppercase tracking-widest text-primary mb-2">Un recuerdo de</p>
+                        <p class="font-headline text-lg italic">El gran Día</p>
+                    </div>
+                </div>
+                <!-- Secondary Images - Asymmetric Layout -->
+                <div class="col-span-12 md:col-span-4 flex flex-col justify-center">
+                    <div class="group relative mb-12">
+                        <div class="aspect-[1/1] overflow-hidden bg-surface-dim">
+                            <img alt="Gown details"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Close-up of delicate lace details on a white traditional gown with soft morning light filtering through a window"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBlRTxu4LypeO4yN8VUBtFXN9cbRuWXs2n4rGj4COdj92vb-PhFoBhAyeW4jbtU9PUOnXGivtZqaxxTmudirpsFbqYtvmZlaUqOG0nOwzFWQO4pPrDnhsQpmTCmPXgb8XuNLnmxbKDV3JyCkvh1rNtxiVR-mGF3CSY54pp_nB_ZjDp5x1b6H7uGI2ICkOs9Uu2G-nM6nfSePet4lClsDfGW9W-9GsnEA_ggaakjK5yssUb62Au_s57itPvTihcuPCADJ3KHHqrsOfE" />
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="font-headline italic text-xl">La Corona Perfecta</h3>
+                            <span class="font-label text-[10px] uppercase tracking-widest text-outline">Detalles &amp;
+                                Texturas</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="col-span-12 md:col-span-4 md:mt-[-10%]">
+                    <div class="group relative mb-8">
+                        <div class="aspect-[3/4] overflow-hidden bg-surface-dim">
+                            <img alt="Tiara Detail"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="A glittering silver tiara resting on a velvet cushion with soft bokeh of fairy lights in the background"
+                                src="https://i.imgur.com/4tYclvT.jpeg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-8">
+                    <div class="group relative mb-8">
+                        <div class="aspect-[16/10] overflow-hidden bg-surface-dim">
+                            <img alt="Emotional Waltz"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Emotional embrace between a father and daughter during the traditional waltz at a high-end ballroom venue"
+                                src="https://i.imgur.com/SziUD2r.jpeg" />
+                        </div>
+                        <div class="mt-6 flex justify-between items-start">
+                            <div>
+                                <h3 class="font-headline italic text-2xl">El mejor Día</h3>
+                                <p class="font-body text-sm text-on-surface-variant max-w-sm mt-2">Capturando el emotivo momento en Familia.</p>
+                            </div>
+                            <span class="font-label text-[10px] uppercase tracking-widest text-outline">
+                                Momentos</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 3: Masonry feel -->
+                <div class="col-span-12 md:col-span-6 md:pr-12">
+                    <div class="group relative mb-8">
+                        <div class="aspect-[3/4] overflow-hidden bg-surface-dim">
+                            <img alt="Reception decor"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="A long table setting at a reception with pink floral centerpieces and crystal glassware under elegant chandeliers"
+                                src="https://i.imgur.com/3RSQ5PH.jpeg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 md:mt-24">
+                    <div class="group relative mb-8">
+                        <div class="aspect-[4/5] overflow-hidden bg-surface-dim">
+                            <img alt="Court of Honor"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                data-alt="Side profile of a young woman laughing while surrounded by her court of honor in matching tuxedos and gowns"
+                                src="https://i.imgur.com/GonHSPM.jpeg" />
+                        </div>
+                        <div class="glass-caption mt-[-40px] relative z-10 mr-12 p-8 ml-auto w-3/4">
+                            <h3 class="font-headline italic text-2xl">Luz &amp; Colores</h3>
+                            <p class="font-body text-sm text-on-surface-variant mt-2">La alegría de la vida capturada en colores vibrantes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action -->
+        <section class="mt-48 px-8 max-w-screen-xl mx-auto text-center">
+            <div class="bg-surface-container-low py-24 px-12">
+                <span class="font-label text-[10px] uppercase tracking-[0.5em] text-outline mb-6 block">Lista para comenzar?</span>
+                <h2 class="font-headline text-4xl md:text-6xl italic mb-12">Haz de tus quince un recuerdo eterno.</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <a href="https://wa.me/51921263459?text=Hola%2C%20estoy%20interesado(a)%20en%20su%20servicio%20de%20fotograf%C3%ADa%20para%20quincea%C3%B1os.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor." target="_blank"
+                        class="bg-primary text-on-primary px-12 py-5 font-label text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
+                        Consultar Ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+  <footer class="w-full py-12 px-8 bg-zinc-100 dark:bg-zinc-900">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-6 w-full border-t border-zinc-200/50 dark:border-zinc-800/50 pt-12">
+      <div class="flex gap-8 order-1">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.instagram.com/edson_yovera?igsh=bGljdTh1ZXJ1OXNz">Instagram</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.tiktok.com/@edson_yovera?_r=1&_t=ZS-95GQdxz29mZ">TikTok</a>
+      </div>
+      <p class="font-sans text-[10px] uppercase tracking-widest text-zinc-500 dark:text-zinc-400 order-3 md:order-2">
+        © 2025 Edson Yovera, Derechos Reservados | Piura - Peru
+      </p>
+      <div class="flex gap-8 order-2 md:order-3">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://wa.me/51921263459">WhatsApp</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.facebook.com/edson.yovera23">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 hidden">
+        <button id="close-menu" class="absolute top-8 right-8">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <a class="text-2xl font-serif italic" href="boda.html">Bodas</a>
+        <a class="text-2xl font-serif italic" href="quince.html">Quinceaños</a>
+        <a class="text-2xl font-serif italic" href="cumple.html">Cumpleaños</a>
+        <a class="text-2xl font-serif italic" href="mas_fotos.html">Más Fotos</a>
+        <a class="text-2xl font-serif italic" href="contacto.html">Contacto</a>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        const toggleMenu = () => mobileMenu.classList.toggle('hidden');
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        menuLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+</body>
+
+</html>

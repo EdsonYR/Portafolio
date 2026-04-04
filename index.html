@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Inicio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#e2e2e2",
+            "surface-dim": "#dadada",
+            "on-tertiary-container": "#ffffff",
+            "on-background": "#1a1c1c",
+            "on-primary": "#e5e2e1",
+            "tertiary": "#3b3b3b",
+            "surface-container-high": "#e8e8e8",
+            "inverse-surface": "#2f3131",
+            "on-secondary": "#ffffff",
+            "primary": "#000000",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "secondary-container": "#d6d4d3",
+            "tertiary-fixed-dim": "#474747",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#5f5e5e",
+            "secondary-fixed": "#c8c6c6",
+            "on-secondary-fixed-variant": "#3b3b3b",
+            "surface": "#f9f9f9",
+            "on-primary-container": "#ffffff",
+            "surface-container-highest": "#e2e2e2",
+            "secondary": "#5f5e5e",
+            "secondary-fixed-dim": "#acabab",
+            "inverse-primary": "#c8c6c5",
+            "on-surface-variant": "#474747",
+            "tertiary-container": "#747474",
+            "surface-bright": "#f9f9f9",
+            "primary-container": "#3c3b3b",
+            "primary-fixed": "#5f5e5e",
+            "outline": "#777777",
+            "primary-fixed-dim": "#474746",
+            "outline-variant": "#c6c6c6",
+            "on-tertiary-fixed": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#ffffff",
+            "tertiary-fixed": "#5e5e5e",
+            "background": "#f9f9f9",
+            "on-secondary-container": "#1b1c1c",
+            "on-primary-fixed-variant": "#e5e2e1",
+            "surface-container-low": "#f3f3f3",
+            "on-error-container": "#410002",
+            "surface-container": "#eeeeee",
+            "on-surface": "#1a1c1c",
+            "on-secondary-fixed": "#1b1c1c",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "surface-variant": "#e2e2e2"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .text-outline {
+      -webkit-text-stroke: 1px currentColor;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+      <a href="index.html" class="font-serif text-2xl uppercase tracking-[0.2em] text-zinc-900 dark:text-zinc-100">
+        Galería de Fotos
+      </a>
+      <div class="hidden md:flex items-center gap-12">
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="boda.html">Bodas</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="quince.html">Quinceaños</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="cumple.html">Cumpleaños</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="mas_fotos.html">Más Fotos</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="contacto.html">Contacto</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-primary">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+  <main>
+    <!-- Hero Section: The Monolith Hero -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-surface-dim">
+      <img alt="Luxury Wedding Portrait" class="absolute inset-0 w-full h-full object-cover grayscale-[20%]"
+        data-alt="dramatic wide shot of a bride and groom standing in a neoclassical marble hall with soft afternoon light streaming through high windows"
+        src="https://i.imgur.com/4FnrwIp.jpeg" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+      <div class="relative z-10 text-center max-w-4xl px-6">
+        <span class="block font-label text-[10px] uppercase tracking-[0.4em] text-white/80 mb-6">Fotografía
+          Profesiónal | Piura Peru</span>
+        <h1 class="font-headline italic text-5xl md:text-8xl text-white tracking-tight mb-12 leading-tight">
+          Capturando la esencia de tus celebraciones más importantes.
+        </h1>
+        <a class="inline-block bg-primary text-on-primary px-12 py-5 font-label text-[12px] uppercase tracking-widest hover:bg-primary-container transition-all duration-500 active:scale-95"
+          href="#work">
+          Ver Más
+        </a>
+      </div>
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/40">
+        <span class="material-symbols-outlined animate-bounce">expand_more</span>
+      </div>
+    </section>
+    <!-- Gallery Section: Editorial Grid -->
+    <section class="py-32 px-8 max-w-screen-2xl mx-auto bg-surface" id="work">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+        <div class="max-w-xl">
+          <p class="font-label text-[10px] uppercase tracking-[0.3em] text-outline text-primary mb-4">Portafolio</p>
+          <h2 class="font-headline text-4xl md:text-5xl leading-tight">Selecciona las fotos</h2>
+        </div>
+        <div class="hidden md:block">
+          <p class="font-body text-outline-variant text-sm max-w-xs text-right">
+
+            Una colección de momentos definidos por la luz, la emoción y la elegancia de sus protagonistas.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-12 gap-8 md:gap-12">
+        <!-- Vertical Portrait -->
+        <a href="boda.html" class="col-span-12 md:col-span-7 group cursor-crosshair">
+          <div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low transition-colors duration-500">
+            <img alt="Wedding Editorial"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90"
+              data-alt="high fashion editorial shot of a bride in a contemporary silk gown standing in front of a brutalist concrete wall"
+              src="https://i.imgur.com/I93VCSD.jpeg" />
+            <div
+              class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+              <span class="font-headline italic text-white text-3xl">Bodas</span> 
+            </div>
+          </div>
+          <div class="mt-6 flex justify-between items-baseline">
+            <h3 class="font-label text-[11px] uppercase tracking-widest text-primary">Una union Inquebrantable</h3>
+            <span class="font-label text-[9px] text-outline text-primary"></span>
+          </div>
+        </a>
+        <!-- Small Detail / Supporting -->
+        <div class="col-span-12 md:col-span-5 flex flex-col justify-center">
+          <a href="cumple.html" class="group cursor-crosshair mb-24 md:mb-0 md:ml-12">
+            <div class="relative aspect-square overflow-hidden bg-surface-container-low">
+              <img alt="Birthday Detail"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90"
+                data-alt="minimalist table setting with crystal glasses and single white peonies in afternoon soft focused sun"
+                src="https://i.imgur.com/5eG2VJb.jpeg" />
+              <div
+                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                <span class="font-headline italic text-white text-3xl">Cumpleaños</span> 
+              </div>
+            </div>
+            <div class="mt-6">
+              <h3 class="font-label text-[11px] uppercase tracking-widest text-primary">Celebrando con la mejor sonrisa
+              </h3>
+            </div>
+          </a>
+        </div>
+        <!-- Wide Landscape -->
+        <a href="quince.html" class="col-span-12 group cursor-crosshair">
+          <div class="relative aspect-[21/9] overflow-hidden bg-surface-container-low">
+            <img alt="Quinceañera Portrait"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-90"
+              data-alt="cinematic wide shot of a girl in an elaborate red gown walking through a historic stone courtyard with golden dust motes in air"
+              src="https://i.imgur.com/FN6zMYP.jpeg" />
+            <div
+              class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+              <span class="font-headline italic text-white text-4xl">Quinceañeras</span> 
+            </div>
+          </div>
+          <div class="mt-6 flex justify-between border-t border-outline-variant/20 pt-4">
+            <h3 class="font-label text-[11px] uppercase tracking-widest text-primary">El gran Dia, un dulce paso de niña
+              a mujer.</h3>
+            <p class="font-body text-xs text-outline tracking-tight"></p>
+          </div>
+        </a>
+        <!-- Two Column Stack -->
+        <a href="mas_fotos.html" class="col-span-12 md:col-span-6 group cursor-crosshair md:mt-12">
+          <div class="relative aspect-square overflow-hidden bg-surface-container-low">
+            <img alt="Bridal Editorial"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90"
+              data-alt="close up focused on textured bridal veil fabric with soft bokeh lights in background, morning light"
+              src="https://i.imgur.com/wF3iFo8.jpeg" />
+            <div
+              class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+              <span class="font-headline italic text-white text-3xl">Más Fotos</span> 
+            </div>
+          </div>
+        </a>
+        <a href="mas_fotos.html" class="col-span-12 md:col-span-6 group cursor-crosshair md:mt-12">
+          <div class="relative aspect-square overflow-hidden bg-surface-container-low">
+            <img alt="Bridal Editorial"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-90"
+              data-alt="close up focused on textured bridal veil fabric with soft bokeh lights in background, morning light"
+              src="https://i.imgur.com/MILMQ8k.jpeg" />
+            <div
+              class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+              <span class="font-headline italic text-white text-3xl">Más Fotos</span> 
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-32 bg-surface-container-low">
+      <div class="max-w-4xl mx-auto px-8 text-center">
+        <h2 class="font-headline italic text-4xl md:text-6xl mb-12">Capturando tus mejores momentos.</h2>
+        <div class="flex flex-col md:flex-row justify-center gap-8 items-center">
+          <a class="group flex items-center gap-4 font-label text-[12px] uppercase tracking-widest text-primary"
+            href="#">
+
+            Reserve una consulta
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+          </a>
+          <span class="hidden md:block w-px h-8 bg-outline-variant/30"></span>
+          <a class="font-label text-[12px] uppercase tracking-widest text-outline hover:text-primary transition-colors"
+            href="#">
+            Cotiza Precio
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="w-full py-12 px-8 bg-zinc-100 dark:bg-zinc-900">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-6 w-full border-t border-zinc-200/50 dark:border-zinc-800/50 pt-12">
+      <div class="flex gap-8 order-1">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.instagram.com/edson_yovera?igsh=bGljdTh1ZXJ1OXNz">Instagram</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.tiktok.com/@edson_yovera?_r=1&_t=ZS-95GQdxz29mZ">TikTok</a>
+      </div>
+      <p class="font-sans text-[10px] uppercase tracking-widest text-zinc-500 dark:text-zinc-400 order-3 md:order-2">
+        © 2025 Edson Yovera, Derechos Reservados | Piura - Peru
+      </p>
+      <div class="flex gap-8 order-2 md:order-3">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://wa.me/51921263459">WhatsApp</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.facebook.com/edson.yovera23">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 hidden">
+    <button id="close-menu" class="absolute top-8 right-8">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a class="text-2xl font-serif italic" href="boda.html">Bodas</a>
+    <a class="text-2xl font-serif italic" href="quince.html">Quinceaños</a>
+    <a class="text-2xl font-serif italic" href="cumple.html">Cumpleaños</a>
+    <a class="text-2xl font-serif italic" href="mas_fotos.html">Más Fotos</a>
+    <a class="text-2xl font-serif italic" href="contacto.html">Contacto</a>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    const toggleMenu = () => mobileMenu.classList.toggle('hidden');
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    menuLinks.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+  </script>
+</body>
+
+</html>

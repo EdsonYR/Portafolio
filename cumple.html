@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Cumpleaños</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#e2e2e2",
+            "surface-dim": "#dadada",
+            "on-tertiary-container": "#ffffff",
+            "on-background": "#1a1c1c",
+            "on-primary": "#e5e2e1",
+            "tertiary": "#3b3b3b",
+            "surface-container-high": "#e8e8e8",
+            "inverse-surface": "#2f3131",
+            "on-secondary": "#ffffff",
+            "primary": "#000000",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "secondary-container": "#d6d4d3",
+            "tertiary-fixed-dim": "#474747",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#5f5e5e",
+            "secondary-fixed": "#c8c6c6",
+            "on-secondary-fixed-variant": "#3b3b3b",
+            "surface": "#f9f9f9",
+            "on-primary-container": "#ffffff",
+            "surface-container-highest": "#e2e2e2",
+            "secondary": "#5f5e5e",
+            "secondary-fixed-dim": "#acabab",
+            "inverse-primary": "#c8c6c5",
+            "on-surface-variant": "#474747",
+            "tertiary-container": "#747474",
+            "surface-bright": "#f9f9f9",
+            "primary-container": "#3c3b3b",
+            "primary-fixed": "#5f5e5e",
+            "outline": "#777777",
+            "primary-fixed-dim": "#474746",
+            "outline-variant": "#c6c6c6",
+            "on-tertiary-fixed": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#ffffff",
+            "tertiary-fixed": "#5e5e5e",
+            "background": "#f9f9f9",
+            "on-secondary-container": "#1b1c1c",
+            "on-primary-fixed-variant": "#e5e2e1",
+            "surface-container-low": "#f3f3f3",
+            "on-error-container": "#410002",
+            "surface-container": "#eeeeee",
+            "on-surface": "#1a1c1c",
+            "on-secondary-fixed": "#1b1c1c",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "surface-variant": "#e2e2e2"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .font-serif {
+      font-family: 'Noto Serif', serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+    }
+
+    .tonal-shift-surface-container-low {
+      background-color: #f3f3f3;
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface">
+  <!-- TopNavBar Component -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+      <a href="index.html" class="font-serif text-2xl uppercase tracking-[0.2em] text-zinc-900 dark:text-zinc-100">
+        Galería de Fotos
+      </a>
+      <div class="hidden md:flex items-center gap-12">
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="boda.html">Bodas</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="quince.html">Quinceaños</a>
+        <a class="text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1 font-serif italic text-2xl tracking-tight"
+          href="cumple.html">Cumpleaños</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="mas_fotos.html">Más Fotos</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="contacto.html">Contacto</a>
+      </div>
+      <button id="menu-btn" class="md:hidden">
+        <span class="material-symbols-outlined text-zinc-900">menu</span>
+      </button>
+    </div>
+  </nav>
+  <main class="pt-32 pb-24">
+    <!-- Hero Header -->
+    <header class="px-8 max-w-screen-2xl mx-auto mb-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div class="max-w-2xl">
+          <span class="font-label text-xs uppercase tracking-[0.3em] text-outline mb-4 block">Un dia muy especial</span>
+          <h1 class="font-serif italic text-6xl md:text-8xl tracking-tight leading-none text-primary">Feliz Cumpleaños
+          </h1>
+          <p class="mt-8 font-body text-lg text-on-surface-variant leading-relaxed max-w-xl">
+            Capturo la alegría espontánea y la energía de cada cumpleaños. Desde los primeros años hasta celebraciones
+            inolvidables, me enfoco en esos momentos reales que hacen única cada historia.
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- Editorial Gallery Grid -->
+    <section class="px-8 max-w-screen-2xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+        <!-- Large Feature Image -->
+        <div class="md:col-span-7 aspect-[4/5] overflow-hidden group">
+          <img alt="Birthday Portrait"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="Candid portrait of a laughing woman wearing a sequined dress at her 30th birthday party with warm ambient bokeh lighting"
+            src="https://i.imgur.com/5DzzLyn.jpeg" />
+          <div class="mt-4 flex justify-between items-start">
+            <div>
+              <h3 class="font-serif text-xl italic">The Thirty Series</h3>
+              <p class="font-label text-[10px] uppercase tracking-widest text-outline mt-1">Downtown Loft, Seattle</p>
+            </div>
+            <span class="font-label text-[10px] text-outline italic">2024</span>
+          </div>
+        </div>
+        <!-- Secondary Cluster -->
+        <div class="md:col-span-5 flex flex-col gap-12">
+          <div class="aspect-square overflow-hidden group">
+            <img alt="Kids Party Decor"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Abstract close-up of colorful pastel balloons and streamers at a child's birthday party in soft morning natural light"
+              src="https://i.imgur.com/OyQ2fnF.jpeg" />
+            <div class="mt-4">
+              <h3 class="font-serif text-xl italic">Pastel Dreams</h3>
+              <p class="font-label text-[10px] uppercase tracking-widest text-outline mt-1">Garden Celebration</p>
+            </div>
+          </div>
+          <div class="aspect-[3/4] overflow-hidden group md:ml-12">
+            <img alt="Cake Cutting"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Dramatic close-up of a birthday cake with glowing candles being held by hands in a dark room with sparks"
+              src="https://i.imgur.com/5eG2VJb.jpeg" />
+            <div class="mt-4">
+              <h3 class="font-serif text-xl italic">The Ritual</h3>
+              <p class="font-label text-[10px] uppercase tracking-widest text-outline mt-1">Intimate Evening Portrait
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Horizontal Feature -->
+        <div class="md:col-span-12 mt-12 mb-12">
+          <div class="aspect-[21/9] overflow-hidden group">
+            <img alt="Lively Crowd"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Cinematic wide shot of a crowded dance floor at a themed birthday party with motion blur and vibrant neon lights"
+              src="https://i.imgur.com/b2jJjK3.jpeg" />
+          </div>
+          <div class="mt-6 flex flex-col md:flex-row justify-between items-baseline gap-4">
+            <h2 class="font-serif text-4xl italic leading-none max-w-xl">"Regala a tus seres queridos recuerdos inolvidables"</h2>
+            <p class="font-label text-xs uppercase tracking-widest text-outline">Una celebración merece tener recuerdos</p>
+          </div>
+        </div>
+        <!-- Final Mosaic Row -->
+        <div class="md:col-span-4 aspect-[4/5] overflow-hidden group">
+          <img alt="Child Portrait"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="Candid high-angle shot of a toddler sitting amidst confetti with a joyful expression and soft daylight"
+            src="https://i.imgur.com/nhqHNkb.jpeg" />
+        </div>
+        <div class="md:col-span-4 aspect-[4/5] overflow-hidden group">
+          <img alt="Adult Party"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="Elegant black and white shot of an older man laughing at a dinner table during his 70th birthday toast"
+            src="https://i.imgur.com/pPG3iIS.jpeg" />
+        </div>
+        <div class="md:col-span-4 aspect-[4/5] overflow-hidden group">
+          <img alt="Gift Details"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="Close-up of minimalist wrapped birthday gifts with dried floral accents on a clean white linen surface"
+            src="https://i.imgur.com/x851nKc.jpeg" />
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action -->
+    <section class="mt-32 px-8 max-w-screen-2xl mx-auto">
+      <div class="bg-surface-container-low p-16 flex flex-col items-center text-center">
+        <span class="font-label text-[10px] uppercase tracking-[0.4em] text-outline mb-6">Que este dia quede para la historia</span>
+        <h2 class="font-serif text-4xl md:text-5xl italic mb-10 text-primary">Celebra hoy, recuérdalo siempre.</h2>
+        <a href="https://wa.me/51921263459?text=Hola%2C%20estoy%20interesado(a)%20en%20su%20servicio%20de%20fotograf%C3%ADa%20para%20cumplea%C3%B1os.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor." target="_blank"
+          class="bg-primary text-on-primary px-12 py-5 font-label text-xs uppercase tracking-widest transition-all duration-300 hover:bg-primary-container active:scale-95 inline-block">
+          Consulta Aqui
+        </a>
+      </div>
+    </section>
+  </main>
+  <!-- Footer Component -->
+  <footer class="w-full py-12 px-8 bg-zinc-100 dark:bg-zinc-900">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-6 w-full border-t border-zinc-200/50 dark:border-zinc-800/50 pt-12">
+      <div class="flex gap-8 order-1">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.instagram.com/edson_yovera?igsh=bGljdTh1ZXJ1OXNz">Instagram</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.tiktok.com/@edson_yovera?_r=1&_t=ZS-95GQdxz29mZ">TikTok</a>
+      </div>
+      <p class="font-sans text-[10px] uppercase tracking-widest text-zinc-500 dark:text-zinc-400 order-3 md:order-2">
+        © 2025 Edson Yovera, Derechos Reservados | Piura - Peru
+      </p>
+      <div class="flex gap-8 order-2 md:order-3">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://wa.me/51921263459">WhatsApp</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.facebook.com/edson.yovera23">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 hidden">
+    <button id="close-menu" class="absolute top-8 right-8">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a class="text-2xl font-serif italic" href="boda.html">Bodas</a>
+    <a class="text-2xl font-serif italic" href="quince.html">Quinceaños</a>
+    <a class="text-2xl font-serif italic" href="cumple.html">Cumpleaños</a>
+    <a class="text-2xl font-serif italic" href="mas_fotos.html">Más Fotos</a>
+    <a class="text-2xl font-serif italic" href="contacto.html">Contacto</a>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    const toggleMenu = () => mobileMenu.classList.toggle('hidden');
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    menuLinks.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Fotos Creativas</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#e2e2e2",
+            "surface-dim": "#dadada",
+            "on-tertiary-container": "#ffffff",
+            "on-background": "#1a1c1c",
+            "on-primary": "#e5e2e1",
+            "tertiary": "#3b3b3b",
+            "surface-container-high": "#e8e8e8",
+            "inverse-surface": "#2f3131",
+            "on-secondary": "#ffffff",
+            "primary": "#000000",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "secondary-container": "#d6d4d3",
+            "tertiary-fixed-dim": "#474747",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#5f5e5e",
+            "secondary-fixed": "#c8c6c6",
+            "on-secondary-fixed-variant": "#3b3b3b",
+            "surface": "#f9f9f9",
+            "on-primary-container": "#ffffff",
+            "surface-container-highest": "#e2e2e2",
+            "secondary": "#5f5e5e",
+            "secondary-fixed-dim": "#acabab",
+            "inverse-primary": "#c8c6c5",
+            "on-surface-variant": "#474747",
+            "tertiary-container": "#747474",
+            "surface-bright": "#f9f9f9",
+            "primary-container": "#3c3b3b",
+            "primary-fixed": "#5f5e5e",
+            "outline": "#777777",
+            "primary-fixed-dim": "#474746",
+            "outline-variant": "#c6c6c6",
+            "on-tertiary-fixed": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#ffffff",
+            "tertiary-fixed": "#5e5e5e",
+            "background": "#f9f9f9",
+            "on-secondary-container": "#1b1c1c",
+            "on-primary-fixed-variant": "#e5e2e1",
+            "surface-container-low": "#f3f3f3",
+            "on-error-container": "#410002",
+            "surface-container": "#eeeeee",
+            "on-surface": "#1a1c1c",
+            "on-secondary-fixed": "#1b1c1c",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "surface-variant": "#e2e2e2"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-100 dark:border-zinc-900">
+    <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+      <a class="font-serif text-2xl uppercase tracking-[0.2em] text-zinc-900 dark:text-zinc-100"
+        href="index.html">Galería de Fotos</a>
+      <div class="hidden md:flex items-center gap-12">
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="boda.html">Bodas</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="quince.html">Quinceaños</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="cumple.html">Cumpleaños</a>
+        <a class="text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1 font-serif italic text-2xl tracking-tight"
+          href="mas_fotos.html">Más Fotos</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="contacto.html">Contacto</a>
+      </div>
+      <button id="menu-btn" class="md:hidden">
+        <span class="material-symbols-outlined text-zinc-900 dark:text-zinc-100">menu</span>
+      </button>
+    </div>
+  </nav>
+  <main class="pt-24 pb-24">
+    <!-- Hero Section -->
+    <header class="px-4 py-8 max-w-screen-2xl mx-auto">
+      <div class="relative bg-zinc-900 overflow-hidden rounded-2xl min-h-[500px] flex flex-col justify-end">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-60"
+          src="https://static.nationalgeographicla.com/files/styles/image_3200/public/ksc-20220612-ph-jbs01_0034-orig.jpg?w=1900&h=1267"
+          alt="Creative Stars" />
+        <div class="absolute right-8 top-8">
+          <dotlottie-wc src="https://lottie.host/c9a6bf25-7bd5-4859-8681-257af3bb34d5/JAsI8PxfE5.lottie"
+            style="width: 100px; height: 100px" autoplay loop></dotlottie-wc>
+        </div>
+        <div class="relative p-12 max-w-4xl">
+          <span class="font-label text-xs uppercase tracking-[0.4em] text-white/70 mb-4 block">Portafolio
+            Especializado</span>
+          <h1 class="font-headline italic text-5xl md:text-8xl text-white mb-6">Fotos Creativas</h1>
+          <p class="font-body text-white/60 text-lg max-w-xl">Capturando la luz más allá de lo convencional a través de
+            técnicas de larga exposición y composición artística.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex justify-center py-12">
+      <dotlottie-wc src="https://lottie.host/58f87803-be86-45a1-9a14-417f9c936116/4F1tHVrKPA.lottie"
+        style="width:60px;height:60px;" autoplay loop></dotlottie-wc>
+    </div>
+
+    <!-- Section Template -->
+    <section class="mb-0">
+      <div class="px-8 max-w-screen-2xl mx-auto mb-12">
+        <span class="font-label text-[10px] uppercase tracking-[0.3em] text-outline text-primary mb-2 block">Pintando
+          con Luz</span>
+        <h2 class="font-headline text-4xl italic">Light Painting</h2>
+      </div>
+      <div class="flex overflow-x-auto hide-scrollbar px-8 gap-8">
+        <!-- Card 1 -->
+        <div class="min-w-[350px] md:min-w-[450px] group cursor-pointer"
+          onclick="openModal(this.querySelector('img').src)">
+          <div class="aspect-[16/10] overflow-hidden bg-zinc-100 mb-6">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="https://www.monsuton.com/wp-content/uploads/2019/06/pintura-con-luz.jpg" alt="Pintura con luz" />
+          </div>
+          <h3 class="font-headline text-xl italic mb-2">Pintura con luz en personas</h3>
+          <p class="font-body text-sm text-zinc-500">Haz que la luz dibuje lo que imaginas.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="min-w-[350px] md:min-w-[450px] group cursor-pointer"
+          onclick="openModal(this.querySelector('img').src)">
+          <div class="aspect-[16/10] overflow-hidden bg-zinc-100 mb-6">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="https://zoomacademy.nl/blog/wp-content/uploads/2020/04/dc6dec360afca08b3a49f41b7fcd6303.jpg"
+              alt="Luz en vehículos" />
+          </div>
+          <h3 class="font-headline text-xl italic mb-2">Dibujos con luz en vehículos</h3>
+          <p class="font-body text-sm text-zinc-500">Convierte tu vehículo en una obra de luz.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="min-w-[350px] md:min-w-[450px] group cursor-pointer"
+          onclick="openModal(this.querySelector('img').src)">
+          <div class="aspect-[16/10] overflow-hidden bg-zinc-100 mb-6">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="https://amateurphotographer.com/wp-content/uploads/sites/7/2022/07/writing-with-sparklers-light-painting-shutterstock_wibulpass-472685368-1000.jpg"
+              alt="Luces y Letras" />
+          </div>
+          <h3 class="font-headline text-xl italic mb-2">Luces y Letras</h3>
+          <p class="font-body text-sm text-zinc-500">Ilumina tu historia con tu nombre.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Astro Section -->
+    <section class="mb-32 py-24 bg-zinc-50">
+      <div class="px-8 max-w-screen-2xl mx-auto mb-12">
+        <span class="font-label text-[10px] uppercase tracking-[0.3em] text-outline text-primary mb-2 block">Cielos
+          Estrellados</span>
+        <h2 class="font-headline text-4xl italic">Astrofotografía</h2>
+      </div>
+      <div class="flex overflow-x-auto hide-scrollbar px-8 gap-8">
+        <div class="min-w-[350px] md:min-w-[550px] group cursor-pointer"
+          onclick="openModal(this.querySelector('img').src)">
+          <div class="aspect-video overflow-hidden bg-zinc-200 mb-6">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="https://cdn.retouchme.com/blogs/151-1657470626-lg.webp" alt="Astro Silueta" />
+          </div>
+          <h3 class="font-headline text-xl italic">Silueta en Astrofotografía</h3>
+        </div>
+        <div class="min-w-[350px] md:min-w-[550px] group cursor-pointer"
+          onclick="openModal(this.querySelector('img').src)">
+          <div class="aspect-video overflow-hidden bg-zinc-200 mb-6">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="https://media.istockphoto.com/id/2164372737/es/foto/vista-trasera-del-hombre-hilando-lana-de-alambre-mientras-est%C3%A1-de-pie-junto-al-lago-contra-el.jpg?s=612x612&w=0&k=20&c=ORjNB_gmZciHmQ8NiCGb5ZJybY7t76mZWK5s35MQKt4="
+              alt="Astro LP" />
+          </div>
+          <h3 class="font-headline text-xl italic">Astrofotografía con LightPainting</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Gallery Mix -->
+    <section class="px-8 max-w-screen-2xl mx-auto mb-32">
+      <div class="px-8 max-w-screen-2xl mx-auto mb-12">
+        <span class="font-label text-[10px] uppercase tracking-[0.3em] text-outline text-primary mb-2 block">Emociones y
+          Siluetas</span>
+        <h2 class="font-headline text-4xl italic">Retratos</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4 space-y-8">
+          <div class="group cursor-pointer" onclick="openModal(this.querySelector('img').src)">
+            <div class="aspect-square overflow-hidden mb-4">
+              <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://i.ytimg.com/vi/f1QrbmSWL-k/maxresdefault.jpg" alt="Clonado" />
+            </div>
+            <h4 class="font-headline italic text-lg">Efecto Clonado</h4>
+          </div>
+          <div class="group cursor-pointer" onclick="openModal(this.querySelector('img').src)">
+            <div class="aspect-[3/4] overflow-hidden mb-4">
+              <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://bunny-wp-pullzone-tsw4mytydl.b-cdn.net/wp-content/uploads/2022/07/Retrato-nocturno.jpg"
+                alt="Urbana" />
+            </div>
+            <h4 class="font-headline italic text-lg">Fotografía Urbana</h4>
+          </div>
+        </div>
+        <div class="md:col-span-8">
+          <div class="group cursor-pointer" onclick="openModal(this.querySelector('img').src)">
+            <div class="aspect-video overflow-hidden mb-4">
+              <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://www.dzoom.org.es/wp-content/uploads/2015/12/Portada-734x487.jpg" alt="Doble Exp" />
+            </div>
+            <h4 class="font-headline italic text-2xl">Doble Exposición en la Naturaleza</h4>
+            <p class="font-body text-zinc-500 mt-2">Fusiona tu esencia con la belleza natural.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 mt-8">
+            <div class="group cursor-pointer" onclick="openModal(this.querySelector('img').src)">
+              <div class="aspect-square overflow-hidden mb-4">
+                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  src="https://darkroomlaboratorio.com/wp-content/uploads/2019/04/contraluz.jpg" alt="Siluetas" />
+              </div>
+              <h4 class="font-headline italic text-lg">Sombras y Siluetas</h4>
+            </div>
+            <div class="group cursor-pointer" onclick="openModal(this.querySelector('img').src)">
+              <div class="aspect-square overflow-hidden mb-4">
+                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  src="https://t4.ftcdn.net/jpg/03/10/68/51/360_F_310685120_lOHG4i61Rnvlt5UySU2s0tlYWA84icgJ.jpg"
+                  alt="Drone" />
+              </div>
+              <h4 class="font-headline italic text-lg">Plano Cenital / Drone</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="px-8 pb-32">
+      <div
+        class="max-w-screen-2xl mx-auto bg-primary text-on-primary py-24 px-12 flex flex-col items-center justify-center text-center">
+        <h2 class="text-4xl md:text-7xl font-headline italic mb-12">¿Tienes una idea en mente?</h2>
+        <a href="https://wa.me/51921263459?text=Hola%2C%20estoy%20interesado(a)%20en%20su%20servicio%20de%20fotos%20creativas.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor."
+          target="_blank"
+          class="bg-surface text-primary px-12 py-5 font-label text-xs uppercase tracking-[0.4em] hover:bg-surface-container-high transition-colors">
+          Consultar sobre fotos creativas
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full py-12 px-8 bg-zinc-100 dark:bg-zinc-900">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-6 w-full border-t border-zinc-200/50 dark:border-zinc-800/50 pt-12">
+      <div class="flex gap-8 order-1">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.instagram.com/edson_yovera?igsh=bGljdTh1ZXJ1OXNz">Instagram</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.tiktok.com/@edson_yovera?_r=1&_t=ZS-95GQdxz29mZ">TikTok</a>
+      </div>
+      <p class="font-sans text-[10px] uppercase tracking-widest text-zinc-500 dark:text-zinc-400 order-3 md:order-2">
+        © 2025 Edson Yovera, Derechos Reservados | Piura - Peru
+      </p>
+      <div class="flex gap-8 order-2 md:order-3">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://wa.me/51921263459">WhatsApp</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.facebook.com/edson.yovera23">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 hidden">
+    <button id="close-menu" class="absolute top-8 right-8">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a class="text-2xl font-serif italic" href="boda.html">Bodas</a>
+    <a class="text-2xl font-serif italic" href="quince.html">Quinceaños</a>
+    <a class="text-2xl font-serif italic" href="cumple.html">Cumpleaños</a>
+    <a class="text-2xl font-serif italic" href="mas_fotos.html">Más Fotos</a>
+    <a class="text-2xl font-serif italic" href="contacto.html">Contacto</a>
+  </div>
+
+  <!-- Image Modal -->
+  <div id="imageModal"
+    class="fixed inset-0 hidden z-[70] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4">
+    <button onclick="closeModal()" class="absolute top-8 right-8 text-white/80 hover:text-white">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <img id="modalImage" src=""
+      class="max-h-[85vh] max-w-full object-contain transition-all duration-300 transform scale-95 opacity-0" />
+  </div>
+
+  <script>
+    // Menú de hamburguesa
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    const toggleMenu = () => mobileMenu.classList.toggle('hidden');
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+    // Funcionalidad Modal
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    function openModal(src) {
+      modal.classList.remove('hidden');
+      modalImg.src = src;
+      setTimeout(() => {
+        modalImg.classList.remove('scale-95', 'opacity-0');
+        modalImg.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      modalImg.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  </script>
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+</body>
+
+</html>

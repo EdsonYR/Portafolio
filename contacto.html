@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Contacto</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#e2e2e2",
+            "surface-dim": "#dadada",
+            "on-tertiary-container": "#ffffff",
+            "on-background": "#1a1c1c",
+            "on-primary": "#e5e2e1",
+            "tertiary": "#3b3b3b",
+            "surface-container-high": "#e8e8e8",
+            "inverse-surface": "#2f3131",
+            "on-secondary": "#ffffff",
+            "primary": "#000000",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "secondary-container": "#d6d4d3",
+            "tertiary-fixed-dim": "#474747",
+            "inverse-on-surface": "#f1f1f1",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#5f5e5e",
+            "secondary-fixed": "#c8c6c6",
+            "on-secondary-fixed-variant": "#3b3b3b",
+            "surface": "#f9f9f9",
+            "on-primary-container": "#ffffff",
+            "surface-container-highest": "#e2e2e2",
+            "secondary": "#5f5e5e",
+            "secondary-fixed-dim": "#acabab",
+            "inverse-primary": "#c8c6c5",
+            "on-surface-variant": "#474747",
+            "tertiary-container": "#747474",
+            "surface-bright": "#f9f9f9",
+            "primary-container": "#3c3b3b",
+            "primary-fixed": "#5f5e5e",
+            "outline": "#777777",
+            "primary-fixed-dim": "#474746",
+            "outline-variant": "#c6c6c6",
+            "on-tertiary-fixed": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#ffffff",
+            "tertiary-fixed": "#5e5e5e",
+            "background": "#f9f9f9",
+            "on-secondary-container": "#1b1c1c",
+            "on-primary-fixed-variant": "#e5e2e1",
+            "surface-container-low": "#f3f3f3",
+            "on-error-container": "#410002",
+            "surface-container": "#eeeeee",
+            "on-surface": "#1a1c1c",
+            "on-secondary-fixed": "#1b1c1c",
+            "on-tertiary-fixed-variant": "#e2e2e2",
+            "surface-variant": "#e2e2e2"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Noto Serif', serif;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+      <a class="font-serif text-2xl uppercase tracking-[0.2em] text-zinc-900 dark:text-zinc-100"
+        href="index.html">Galería de Fotos</a>
+      <div class="hidden md:flex items-center gap-12">
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="boda.html">Bodas</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="quince.html">Quinceaños</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="cumple.html">Cumpleaños</a>
+        <a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300 font-serif italic text-2xl tracking-tight"
+          href="mas_fotos.html">Más Fotos</a>
+        <a class="text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1 font-serif italic text-2xl tracking-tight"
+          href="contacto.html">Contacto</a>
+      </div>
+      <button id="menu-btn" class="md:hidden">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+  <main class="pt-32 pb-24">
+    <section class="bg-surface-container-low py-20">
+      <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-20">
+        <!-- Contact Info & Socials -->
+        <div class="lg:col-span-4 space-y-16">
+          <div>
+            <h2 class="text-4xl font-headline italic mb-8">Contacto</h2>
+            <p class="font-body text-on-surface-variant leading-relaxed">
+              Para trabajos, colaboraciones o consultas generales, póngase en contacto a través del
+              formulario o de los canales directos.
+            </p>
+          </div>
+          <div class="space-y-8">
+            <div>
+              <p class="font-label text-[10px] uppercase tracking-widest text-outline mb-2">Correo</p>
+              <a class="font-headline text-2xl hover:opacity-60 transition-opacity underline decoration-1 underline-offset-8"
+                href="mailto:edsonyovera29@gmail.com?subject=Consulta%20sobre%20servicios%20fotográficos">edsonyovera29@gmail.com</a>
+            </div>
+            <div>
+              <p class="font-label text-[10px] uppercase tracking-widest text-outline mb-2">Telefono</p>
+              <a href="tel:+51921263459" class="font-headline text-2xl hover:opacity-60 transition-opacity tracking-tight">+51 921263459</a>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <p class="font-label text-[10px] uppercase tracking-widest text-outline">Contacta</p>
+            <div class="flex gap-8 font-label text-xs uppercase tracking-widest">
+              <a class="hover:text-primary-fixed transition-colors" href="https://www.instagram.com/edson_yovera?igsh=bGljdTh1ZXJ1OXNz">Instagram</a>
+              <a class="hover:text-primary-fixed transition-colors" href="https://www.tiktok.com/@edson_yovera?_r=1&_t=ZS-95GQdxz29mZ">TikTok</a>
+              <a class="hover:text-primary-fixed transition-colors" href="https://wa.me/51921263459">WhatsApp</a>
+              <a class="hover:text-primary-fixed transition-colors" href="https://www.facebook.com/edson.yovera23">Facebook</a>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <div class="lg:col-span-8 bg-white p-12 md:p-20 shadow-sm">
+          <form action="https://formspree.io/f/mvzvvowj" class="space-y-12" method="POST">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div class="relative group">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-outline mb-2">Nombre</label>
+                <input name="nombre"
+                  class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body"
+                  placeholder="Nombres y Apellidos" type="text" required />
+              </div>
+              <div class="relative group">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-outline mb-2">Correo o número</label>
+                <input name="contacto"
+                  class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body"
+                  placeholder="Ej: email@example.com o +51 ..." type="text" required />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div class="relative group">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-outline mb-2">Tipo de
+                  evento</label>
+                <select name="tipo de evento"
+                  class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body appearance-none">
+                  <option value="Boda">Boda</option>
+                  <option value="Quince">Quinceaños</option>
+                  <option value="Cumple">Cumpleaños</option>
+                  <option value="Otra consulta">Otra Consulta</option>
+                </select>
+              </div>
+              <div class="relative group">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-outline mb-2">Fecha del evento</label>
+                <input name="fecha de evento" id="event-date"
+                  class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body"
+                  type="date" required />
+              </div>
+            </div>
+            <div class="relative group">
+              <label class="block font-label text-[10px] uppercase tracking-widest text-outline mb-2">Mensaje</label>
+              <textarea name="mensaje"
+                class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body resize-none"
+                placeholder="Cuentame sobre tu evento..." rows="4" required></textarea>
+            </div>
+            <button
+              class="bg-primary text-white font-label text-xs uppercase tracking-[0.3em] px-12 py-6 hover:bg-zinc-800 transition-colors w-full md:w-auto"
+              type="submit">
+              Eviar consulta
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-screen-2xl mx-auto px-8 py-24 flex flex-col items-center text-center">
+      <div class="max-w-3xl">
+        <p class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-4 block">El Artista detras de la lente</p>
+        <h1 class="text-5xl md:text-7xl font-headline italic tracking-tighter mb-8 text-primary">Edson Yovera</h1>
+        <div class="space-y-6 text-on-surface-variant font-body leading-relaxed text-lg">
+          <p>
+            La fotografía es más que un medio; es un diálogo silencioso entre el momento y el recuerdo. Con más de
+            3 años de experiencia en trabajos de eventos y retratos, me especializo en capturar la belleza
+            de los protagonistas y la emoción genuina en bodas, quinceañeros y cumpleaños y otros eventos privados.
+          </p>
+          <p>
+
+            Mi enfoque se basa en principios minimalistas: eliminar lo superfluo para encontrar la esencia auténtica y
+            serena de una boda, una quinceañera o un momento especial. Creo que cada imagen debe sentirse como una obra
+            de arte, digna de ser exhibida en una galería en lugar de perderse en un feed digital.
+          </p>
+        </div>
+        <div class="mt-12 pt-12 border-t border-outline-variant/30 flex flex-col items-center">
+          <h3 class="font-label text-[10px] uppercase tracking-widest text-outline mb-6">Estética Distintiva</h3>
+          <ul class="space-y-4 font-body text-sm text-left">
+            <li class="flex items-center gap-4">
+              <span class="w-2 h-px bg-primary"></span>
+              <span>Fotografía con luz natural</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span class="w-2 h-px bg-primary"></span>
+              <span>Composición Cinematica</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span class="w-2 h-px bg-primary"></span>
+              <span>Edición con Realismo</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span class="w-2 h-px bg-primary"></span>
+              <span>Documentar lo momentos emotivos</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full py-12 px-8 bg-zinc-100 dark:bg-zinc-900">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-6 w-full border-t border-zinc-200/50 dark:border-zinc-800/50 pt-12">
+      <div class="flex gap-8 order-1">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.instagram.com/edson_yovera?igsh=bGljdTh1ZXJ1OXNz">Instagram</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.tiktok.com/@edson_yovera?_r=1&_t=ZS-95GQdxz29mZ">TikTok</a>
+      </div>
+      <p class="font-sans text-[10px] uppercase tracking-widest text-zinc-500 dark:text-zinc-400 order-3 md:order-2">
+        © 2025 Edson Yovera, Derechos Reservados | Piura - Peru
+      </p>
+      <div class="flex gap-8 order-2 md:order-3">
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://wa.me/51921263459">WhatsApp</a>
+        <a class="font-sans text-[20px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          href="https://www.facebook.com/edson.yovera23">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 hidden">
+    <button id="close-menu" class="absolute top-8 right-8">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <a class="text-2xl font-serif italic" href="boda.html">Bodas</a>
+    <a class="text-2xl font-serif italic" href="quince.html">Quinceaños</a>
+    <a class="text-2xl font-serif italic" href="cumple.html">Cumpleaños</a>
+    <a class="text-2xl font-serif italic" href="mas_fotos.html">Más Fotos</a>
+    <a class="text-2xl font-serif italic" href="contacto.html">Contacto</a>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    const toggleMenu = () => mobileMenu.classList.toggle('hidden');
+
+    menuBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    menuLinks.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // Establecer fecha mínima como hoy para el campo de fecha
+    const dateInput = document.getElementById('event-date');
+    if (dateInput) {
+      dateInput.min = new Date().toISOString().split('T')[0];
+    }
+  </script>
+</body>
+
+</html>
